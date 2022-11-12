@@ -1,0 +1,21 @@
+.post-list {
+  padding: 20px 0;
+  height: calc(100vh - 300px);
+  overflow-y: scroll;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-list > div {
+  width: 960px;
+  margin: 0 !important;
+}
+
+.post-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}

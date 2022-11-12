@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from "react";
 import './App.css';
+import {BrowserRouter, Route} from "react-router-dom";
+import {AuthContext} from "./context";
+import AppRouter from "./router/AppRouter";
+import {useHistory} from "react-router-dom";
 
 function App() {
+  const router = useHistory();
+  const [isAuth, setIsAuth] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    if (localStorage.getItem("auth") === "Polina") {
+      setIsAuth(true);
+    }
+    setIsLoading(false);
+  }, []);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider value={{
+      isAuth,
+      setIsAuth,
+      isLoading
+    }}>
+      <BrowserRouter>
+        <AppRouter/>
+      </BrowserRouter>
+    </AuthContext.Provider>
   );
 }
 

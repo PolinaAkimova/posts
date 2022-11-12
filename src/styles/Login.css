@@ -1,0 +1,12 @@
+.login__form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login__input {
+  width: 85%;
+}
+
+.login__container {
+  padding-top: 200px !important;
+}

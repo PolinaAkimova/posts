@@ -1,0 +1,9 @@
+.input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.successMsg {
+  color: green;
+  text-align: center;
+}

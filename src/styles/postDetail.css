@@ -1,0 +1,40 @@
+.post-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-detail__header {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent), url("../assets/post_header_additional.jpg");
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 80px;
+  color: white;
+  height: 150px;
+  padding: 15px 0;
+}
+
+.post-detail__container {
+}
+
+.post-detail__avatar {
+  border: 2px solid white;
+  width: 120px;
+}
+
+.post-detail__icons {
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-detail__icon-field {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.post-detail__text {
+  width: 100%;
+  color: #282c34;
+}
